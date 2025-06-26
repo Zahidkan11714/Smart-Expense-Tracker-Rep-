@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e0f7f9"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Expense Tracker"
+        android:textSize="20sp"
+        android:textColor="#093f45"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/button_add_expense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="➕ Add Expense"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#26c6da"
+            android:textColor="#fff"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/button_add_expense_auto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📷 Scan Receipt"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#26c6da"
+            android:textColor="#fff"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/pieChartBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="📊 See Chart"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#26c6da"
+            android:textColor="#fff"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/exportPdfBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="🗂 Export PDF"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#26c6da"
+            android:textColor="#fff"
+            android:padding="12dp" />
+    </GridLayout>
+
+    <!-- Expense List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" />
+</LinearLayout>
